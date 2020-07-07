@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" client="site" type="module" method="upgrade">
+        <name>Kiwi Template</name>
+        <author>NextG-ERP</author>
+        <creationDate>Aug 06 2015</creationDate>
+        <copyright>Copyright (C) 2015 NextG-ERP. All rights reserved.</copyright>
+        <license>GNU General Public License</license>
+        <authorUrl>http://nextgerp.com</authorUrl>
+        <version>1.1</version>
+        <description>Kiwi Template</description>
+        <files>
+                <filename module="mod_kiwitemplate">mod_kiwitemplate.php</filename>
+                <folder>tmpl</folder>
+                <folder>assets</folder>
+                <folder>language</folder>
+                <filename>helper.php</filename>
+                <filename>index.html</filename>
+                <filename>license.txt</filename>
+                <filename>mod_kiwitemplate.xml</filename>
+        </files>
+        <config>
+                <fields name="params">
+                        <fieldset name="basic">
+                                <field
+                                        name="description"
+                                        type="editor"
+                                        buttons="true"
+                                        label="Desctipion"
+                                        description="Display description"
+                                        class="inputbox"
+                                        filter="JComponentHelper::filterText"
+                                />
+                                <field name="moduleclass_sfx"
+                                       type="text"
+                                       default=""
+                                       label="Module Class Suffix"
+                                       description="If you want to apply a custom style, change this class suffix." />
+                        </fieldset>
+                        <fieldset name="advanced">
+                                <field
+                                        name="layout"
+                                        type="modulelayout"
+                                        label="JFIELD_ALT_LAYOUT_LABEL"
+                                        description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                                <field name="cache" type="list"
+                                       default="1" label="Caching"
+                                       description="Select whether to cache the content of this module">
+                                        <option value="1">Use global</option>
+                                        <option value="0">No caching</option>
+                                </field>
+                                <field name="cache_time" type="text"
+                                       default="900" label="Cache Time"
+                                       description="The time before the module is recached" />
+                        </fieldset>
+                </fields>
+        </config>
+</extension>

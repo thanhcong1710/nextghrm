@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" client="site" type="module" method="upgrade">
+        <name>MOD_KIWIAJAXSEARCH</name>
+        <author>NextG-ERP</author>
+        <creationDate>Aug 11 2015</creationDate>
+        <copyright>Copyright (C) 2015 NextG-ERP. All rights reserved.</copyright>
+        <license>GNU General Public License</license>
+        <authorUrl>http://nextgerp.com</authorUrl>
+        <version>1.1</version>
+        <description>MOD_KIWIAJAXSEARCH_XML_DESCRIPTION</description>
+        <files>
+                <filename module="mod_kiwiajaxsearch">mod_kiwiajaxsearch.php</filename>
+                <folder>tmpl</folder>
+                <folder>assets</folder>
+                <folder>language</folder>
+                <filename>helper.php</filename>
+                <filename>index.html</filename>
+                <filename>license.txt</filename>
+                <filename>mod_kiwiajaxsearch.xml</filename>
+        </files>
+        <config>
+                <fields name="params">
+                        <fieldset name="advanced">
+                                <field name="cache" type="list"
+                                       default="1" label="Caching"
+                                       description="Select whether to cache the content of this module">
+                                        <option value="1">Use global</option>
+                                        <option value="0">No caching</option>
+                                </field>
+                                <field name="cache_time" type="text"
+                                       default="900" label="Cache Time"
+                                       description="The time before the module is recached" />
+                        </fieldset>
+                </fields>
+        </config>
+</extension>

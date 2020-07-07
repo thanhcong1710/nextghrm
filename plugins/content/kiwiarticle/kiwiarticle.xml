@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+        <name>Kiwi Article</name>
+        <author>NextG-ERP</author>
+        <authorUrl>http://nextgerp.com</authorUrl>
+        <copyright>Copyright (c) 2015 NextG-ERP. All rights reserved.</copyright>
+        <creationDate>Aug 13th, 2015</creationDate>
+        <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+        <version>1.0.0</version>
+        <description>Kiwi Article</description>
+        <config>
+                <fields name="params">
+                        <fieldset name="basic">
+
+                        </fieldset>
+                </fields>
+        </config>
+        <files>
+                <filename plugin="kiwiarticle">kiwiarticle.php</filename>
+        </files>
+</extension>

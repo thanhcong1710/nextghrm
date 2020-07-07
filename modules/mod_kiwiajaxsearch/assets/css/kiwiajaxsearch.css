@@ -1,0 +1,6 @@
+.kiwias-video-search-box .video-scroll{max-height:350px; overflow-y:auto; overflow-x:hidden;}
+.kiwias-video-search-box .video-search-form {position:absolute; top:7px; right:15px;}
+.kiwias-video-search-box {padding:5px; margin-bottom:10px; border:1px solid #d9d9d9;}
+.kiwias-video-search-box .video-response{max-height:400px; overflow-y:auto; overflow-x:hidden;}
+.kiwias-video-search-box .form-group .chzn-container-multi .chzn-choices{padding:7px;}
+.kiwias-video-search-box .search-form{margin:10px;}

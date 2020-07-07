@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="editors-xtd" method="upgrade">
+        <name>Plugin KiwiVideoEditor</name>
+        <author>NextG-ERP</author>
+        <creationDate>Aug 13, 2015</creationDate>
+        <copyright>Copyright (C) 2015 NextG-ERP. All rights reserved.</copyright>
+        <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+        <authorUrl>www.nextgerp.com</authorUrl>
+        <version>3.0.0</version>
+        <description>Display video in article</description>
+        <files>
+                <filename plugin="kiwivideoeditor">kiwivideoeditor.php</filename>
+                <folder>language</folder>
+        </files>
+</extension>

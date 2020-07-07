@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1"
+           type="plugin"
+           group="ajax"
+           method="upgrade">
+        <name>Kiwi Video Helper</name>
+        <version>1.1</version>
+        <creationDate>Aug 09, 2015</creationDate>
+        <authorUrl>http://www.nextgerp.com</authorUrl>
+        <license>GNU General Public License version 2 or later</license>
+        <copyright>Copyright (C) 2015 NextG-ERP. All rights reserved.</copyright>
+        <description>Display video and update video hits</description>
+
+        <files>
+                <filename plugin="kiwivideo">kiwivideo.php</filename>
+        </files>
+
+        <config>
+                <fields name="params">
+                        <fieldset name="basic">
+
+                        </fieldset>
+                </fields>
+        </config>
+
+</extension>
