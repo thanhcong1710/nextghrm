@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+  <name>Layer Slider</name>
+  <creationDate>2014-03-24</creationDate>
+  <copyright>Copyright (C) 2014. All rights reserved.</copyright>
+  <author>John Gera, George Krupa, Janos Biro</author>
+  <authorEmail>janos.biro@offlajn.com</authorEmail>
+  <authorUrl>http://offlajn.com</authorUrl>
+  <version>5.1.1.048</version>
+  <description/>
+  <media destination="offlajn">
+    <filename>jquery.noconflict.js</filename>
+    <filename>index.html</filename>
+  </media>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="slider" type="sql" default="0" label="Select a slider" query="SELECT id AS value, CONCAT(id,' - ',name) AS slider FROM #__layerslider WHERE flag_deleted=0"/>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+      </fieldset>
+    </fields>
+  </config>
+  <license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
+  <releaseDate>2014-06-18</releaseDate>
+  <files>
+    <filename>imagelightbox.css</filename>
+    <filename>imagelightbox.js</filename>
+    <filename>index.html</filename>
+    <filename>jquery.noconflict.js</filename>
+    <filename>layer_slider_helper.php</filename>
+    <filename module="mod_layer_slider">mod_layer_slider.php</filename>
+    <filename>mod_layer_slider.xml</filename>
+  </files>
+<hash>5Thdt9pc5TE9ShmG7wa2FO80OetHwuR0HxDQtIcXzmE=</hash></extension>

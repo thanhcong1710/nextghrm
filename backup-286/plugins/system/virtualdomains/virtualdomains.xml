@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" method="upgrade" client="site" group="system">
+	<name>System - virtualdomains</name>
+	<creationDate>March 2011</creationDate>	
+	<author>Michael Liebler</author>
+	<authorEmail>michael-liebler@janguo.de</authorEmail>
+	<authorUrl>www.janguo.de</authorUrl>
+	<copyright>Copyright (C) 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.2.3-mccoy</version>
+	<description>Run virtual domains with different contents from a single Joomla! instance</description>
+	<files>
+		<filename plugin="virtualdomains">virtualdomains.php</filename>	
+	</files>
+	 <scriptfile>plugin.install.php</scriptfile>
+	<config>
+		<fields>
+		</fields>
+	</config>	
+</extension>

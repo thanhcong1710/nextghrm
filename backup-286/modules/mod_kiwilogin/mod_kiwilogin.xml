@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="module" method="upgrade" client="site">
+        <name>MOD_KIWILOGIN</name>
+        <version>1.1</version>
+        <creationDate>2015/08/05</creationDate>
+        <author>NextG-ERP | http://nextgerp.com</author>
+        <authorUrl>http://nextgerp.com</authorUrl>
+        <copyright>Copyright (C) 2015 NextG-ERP. All rights reserved.</copyright>
+        <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+        <description>Kiwi Login</description>
+        <files>
+                <filename module="mod_kiwilogin">mod_kiwilogin.php</filename>
+                <filename>helper.php</filename>
+                <filename>index.html</filename>
+                <filename>mod_kiwilogin.xml</filename>
+                <filename>scl_helper.php</filename>
+                <folder>tmpl</folder>
+                <folder>language</folder>
+                <folder>css</folder>
+        </files>
+        <config>
+                <fields name="params">
+                        <fieldset name="login" label="Login View Settings">
+                                <field name="displayType"
+                                       type="list"
+                                       default="inline"
+                                       label="Display Type"
+                                       description="Show the Login form inline or in a modal popup.">
+                                        <option value="inline">Always Visible</option>
+                                        <option value="modal">Modal Popup</option>
+                                </field>
+                                <field name="modalButtonStyle"
+                                       type="list"
+                                       default="button"
+                                       label="Modal Style"
+                                       description="Style of Register and Login links when display is shown in modal popup">
+                                        <option value="button">Button</option>
+                                        <option value="text">Text</option>
+                                </field>
+                                <field name="socialButtonsLayout"
+                                       type="list"
+                                       default="vertical"
+                                       label="Layout"
+                                       description="Overall layout of the Login form. Vertical is good for a sidebar position. Horizontal has a wider, more condensed view.">
+                                        <option value="vertical">Vertical</option>
+                                        <option value="horizontal">Horizontal</option>
+                                </field>
+                                <field name="showLoginForm"
+                                       type="radio"
+                                       default="1"
+                                       label="Show Login Form"
+                                       description="Show the Joomla login form with username/password and login button">
+                                        <option value="0">Hide</option>
+                                        <option value="1">Show</option>
+                                </field>
+                                <field name="showForgotUsername"
+                                       type="radio"
+                                       default="1"
+                                       label="Show Forgot Username"
+                                       description="Show the 'Forgot Username' button when 'Show Login Form' is enabled">
+                                        <option value="0">Hide</option>
+                                        <option value="1">Show</option>
+                                </field>
+                                <field name="showForgotPassword"
+                                       type="radio"
+                                       default="1"
+                                       label="Show Forgot Password"
+                                       description="Show the 'Forgot Password' button when 'Show Login Form' is enabled">
+                                        <option value="0">Hide</option>
+                                        <option value="1">Show</option>
+                                </field>
+                                <field name="forgotColor"
+                                       type="list"
+                                       default="black"
+                                       label="Forgot Image Color"
+                                       description="Color of the images for 'Forgot Username' and 'Forgot Password' when enabled. This only takes effect if 'Load Boostrap' option is enabled.">
+                                        <option value="black">Black</option>
+                                        <option value="white">White</option>
+                                </field>
+                                <field name="showRegisterLink"
+                                       type="list"
+                                       default="1"
+                                       label="Show Register Button"
+                                       description="Show the 'Register' button. Only shown in the Login form when 'Show Login Form' is enabled.">
+                                        <option value="0">Hide</option>
+                                        <option value="1">Show in Login Form Only</option>
+                                        <option value="2">Show in Modal Links Only</option>
+                                        <option value="3">Show in Both</option>
+                                </field>
+                                <field name="register_type"
+                                       type="list"
+                                       default="joomla"
+                                       label="Registration Component"
+                                       description="This changes the 'Register' button to point to the component specified.">
+                                        <option value="joomla">Joomla</option>
+                                        <option value="jomsocial">JomSocial</option>
+                                        <option value="communitybuilder">Community Builder</option>
+                                        <option value="kunena">Kunena</option>
+                                        <option value="virtuemart">Virtuemart</option>
+                                </field>
+                                <field name="jlogin"
+                                       type="menuitem"
+                                       default=""
+                                       disable="separator"
+                                       label="Joomla Login Redirection URL"
+                                       description="mod_kiwilogin_PARAMJOOMLALOGINREDIRECTURL">
+                                        <option value="">Same Page</option>
+                                </field>
+                                <field name="usesecure"
+                                       type="radio"
+                                       default="0"
+                                       label="Encrypt Login Form"
+                                       description="Submit encrypted login data (requires SSL)">
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                </field>
+                        </fieldset>
+                        <fieldset name="logout" label="Logout View Settings">
+                                <field name="enableProfilePic"
+                                       type="list"
+                                       default="0"
+                                       label="Enable Profile Picture"
+                                       description="Show profile picture of user when logged in. If a social network is selected, the avatar from that network will be displayed first, if available. If not, the other one will be used. If a Joomla-only user is logged in, the image from any supported 3rd party extension will be shown.">
+                                        <option value="0">Hide</option>
+                                        <option value="facebook">Facebook</option>
+                                        <option value="linkedin">LinkedIn</option>
+                                        <option value="joomla">Joomla</option>
+                                </field>
+                                <field name="profileWidth"
+                                       type="text"
+                                       default="50"
+                                       label="Profile Width (in px)"
+                                       description="Width of profile picture. Suggested sizes are: Square/Small (50), Normal (100), Large (200)"/>
+                                <field name="profileHeight"
+                                       type="text"
+                                       default=""
+                                       label="Profile Height (in px)"
+                                       description="Height of profile picture. Suggested sizes are: Square(50), Small/Normal/Large (leave blank)"/>
+                                <field name="linkProfile"
+                                       type="radio"
+                                       default="0"
+                                       label="Link pic to social profile"
+                                       description="Link the profile pic to the user's LinkedIn or Facebook public profile">
+                                        <option value="0">Do Not Link</option>
+                                        <option value="1">Link</option>
+                                </field>
+                                <field name="greetingName"
+                                       type="list"
+                                       default="1"
+                                       label="Greeting"
+                                       description="Name to show for Greeting. If 'None' is selected, greeting will be hidden.">
+                                        <option value="0">Username</option>
+                                        <option value="1">Real Name</option>
+                                        <option value="2">None</option>
+                                </field>
+                                <field name="showUserMenu"
+                                       type="menu"
+                                       default=""
+                                       disable="separator"
+                                       label="Show User Menu"
+                                       description="Select a user menu to be shown as a dropdown menu">
+                                        <option value="">--None--</option>
+                                </field>
+                                <field name="userMenuStyle"
+                                       type="list"
+                                       default="0"
+                                       label="User Menu Style"
+                                       description="When 'Show User Menu' is enabled, the menu will be displayed with this style">
+                                        <option value="1">List</option>
+                                        <option value="0">Dropdown</option>
+                                </field>
+                                <field name="showLogoutButton"
+                                       type="radio"
+                                       default="1"
+                                       label="Show Logout Button"
+                                       description="Show Logout Button when user is logged in">
+                                        <option value="0">Hide</option>
+                                        <option value="1">Show as a Button</option>
+                                        <option value="2">Show as a Link</option>
+                                </field>
+                                <field name="showConnectButton"
+                                       type="radio"
+                                       default="1"
+                                       label="Show Connect Account Button(s)"
+                                       description="When logged in through Joomla only and the user has never connected their account to a Facebook or LinkedIn account, show a Connect to Facebook and/or LinkedIn button.">
+                                        <option value="0">Hide</option>
+                                        <option value="1">Show</option>
+                                </field>
+                                <field name="jlogout"
+                                       type="menuitem"
+                                       default=""
+                                       disable="separator"
+                                       label="Joomla Logout Redirection URL"
+                                       description="Select the page the user will be redirected to after logout. Select from all the pages listed in the dropdown menu. Note: if using JFBConnect, this setting should be configured in that component.">
+                                        <option value="">Same Page</option>
+                                </field>
+                        </fieldset>
+                        <fieldset name="advanced">
+                                <field name="user_intro"
+                                       type="textarea"
+                                       default=""
+                                       rows="5"
+                                       cols="40"
+                                       label="Intro Text"
+                                       description="PARAMUSERDESC"
+                                       filter="safehtml" />
+                                <field name="bootstrapVersion"
+                                       type="radio"
+                                       default="2"
+                                       label="Bootstrap Version"
+                                       description="Please select you right bootstrap version">
+                                        <option value="2">2.x</option>
+                                        <option value="3">3.0</option>
+                                </field>
+                                <field name="load_css"
+                                       type="radio"
+                                       default="1"
+                                       label="Load CSS"
+                                       description="If the main template already include the same CSS, you can disable this to boost your site a little bit">
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                </field>
+                                <field name="moduleclass_sfx"
+                                       type="text"
+                                       default=""
+                                       label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                                <field
+                                        name="cache"
+                                        type="list"
+                                        default="1"
+                                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                                        description="COM_MODULES_FIELD_CACHING_DESC">
+                                        <option
+                                                value="1">JGLOBAL_USE_GLOBAL</option>
+                                        <option
+                                                value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                                </field>
+                        </fieldset>
+                </fields>
+        </config>
+</extension>

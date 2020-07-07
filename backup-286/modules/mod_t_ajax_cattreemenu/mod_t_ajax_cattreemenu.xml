@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+        <name>mod_t_ajax_cattreemenu</name>
+        <author>NextG-ERP</author>
+        <authorUrl>http://nextgerp.com</authorUrl>
+        <creationDate>Aug 24, 2015</creationDate>
+        <url>http://nextgerp.com</url>
+        <license>GNU/GPL version 2 or later; see LICENCE.txt</license>
+        <copyright>Copyright (C) 2015 NextG-ERP. All rights reserved.</copyright>
+        <version>1.0.14</version>
+        <description>MOD_T_AJAX_CATTREEMENU_XML_DESCRIPTION</description>
+        <files>
+                <filename module="mod_t_ajax_cattreemenu">mod_t_ajax_cattreemenu.php</filename>
+                <folder>tmpl</folder>
+                <folder>assets</folder>
+                <folder>language</folder>
+                <filename>helper.php</filename>
+                <filename>index.html</filename>
+                <filename>mod_t_ajax_cattreemenu.xml</filename>
+        </files>
+        <config>
+                <fields name="params">
+                        <fieldset name="basic">
+                                <field
+                                        name="parent"
+                                        type="category"
+                                        extension="com_content"
+                                        published=""
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_PARENT_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_PARENT_DESC"/>
+                                <field
+                                        name="maxlevel"
+                                        type="list"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_MAXLEVEL_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_MAXLEVEL_DESC"
+                                        default="0"
+                                >
+                                        <option value="0">JALL</option>
+                                        <option value="1">J1</option>
+                                        <option value="2">J2</option>
+                                        <option value="3">J3</option>
+                                        <option value="4">J4</option>
+                                        <option value="5">J5</option>
+                                        <option value="6">J6</option>
+                                        <option value="7">J7</option>
+                                        <option value="8">J8</option>
+                                        <option value="9">J9</option>
+                                        <option value="10">J10</option>
+                                </field>
+
+                                <field
+                                        name="cat_ordering"
+                                        type="list"
+                                        default="a.id"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_CAT_ORDERING_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_CAT_ORDERING_DESC"
+                                >
+                                        <option value="a.id">MOD_T_AJAX_CATTREEMENU_FIELD_CAT_ORDERING_ID</option>
+                                        <option value="a.created_time">MOD_T_AJAX_CATTREEMENU_FIELD_CAT_ORDERING_CREATED_TIME</option>
+                                        <option value="a.title">MOD_T_AJAX_CATTREEMENU_FIELD_CAT_ORDERING_TITLE</option>
+                                        <option value="numitems">MOD_T_AJAX_CATTREEMENU_FIELD_CAT_ORDERING_NUMITEMS</option>
+                                        <option value="a.lft">MOD_T_AJAX_CATTREEMENU_FIELD_CAT_ORDERING_LEFT</option>
+                                </field>
+
+                                <field
+                                        name="cat_direction"
+                                        type="list"
+                                        default="DESC"
+                                        label="JGLOBAL_ORDER_DIRECTION_LABEL"
+                                        description="JGLOBAL_ORDER_DIRECTION_DESC"
+                                >
+                                        <option value="ASC">JGLOBAL_ORDER_ASCENDING</option>
+                                        <option value="DESC">JGLOBAL_ORDER_DESCENDING</option>
+                                </field>
+
+                                <field
+                                        name="display_empty_cat"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="0"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_DISPLAY_EMPTY_CATEGORY_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_DISPLAY_EMPTY_CATEGORY_DESC">
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                </field>
+
+                                <field
+                                        name="numitems"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="0"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_SHOW_NUMBER_OF_ITEMS_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_SHOW_NUMBER_OF_ITEMS_DESC">
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                </field>
+
+                                <field
+                                        name="numitems_style"
+                                        type="list"
+                                        default="label"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_NUMITEMS_STYLE_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_NUMITEMS_STYLE_DESC">
+                                        <option value="label">Label</option>
+                                        <option value="badge">Badge</option>
+                                </field>
+
+                                <field
+                                        name="numitems_background"
+                                        type="color"
+                                        default="#D6D6D6"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_NUMITEMS_BACKGROUND_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_NUMITEMS_BACKGROUND_DESC">
+                                </field>
+
+                                <field
+                                        name="numitems_color"
+                                        type="color"
+                                        default="#ffffff"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_NUMITEMS_COLOR_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_NUMITEMS_COLOR_DESC">
+                                </field>
+
+                                <field
+                                        name="display_article"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_DISPLAY_ARTICLE_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_DISPLAY_ARTICLE_DESC">
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                </field>
+                                <field
+                                        name="article_number"
+                                        type="text"
+                                        default="10"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_ARTICLE_NUMBER_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_ARTICLE_NUMBER_DESC">
+                                </field>
+
+                                <field
+                                        name="article_ordering"
+                                        type="list"
+                                        default="a.publish_up"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_ARTICLE_ORDERING_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_ARTICLE_ORDERING_DESC"
+                                >
+                                        <option value="a.publish_up">MOD_T_AJAX_CATTREEMENU_FIELD_ARTICLE_ORDERING_PUBLISHED_DATE</option>
+                                        <option value="a.created">MOD_T_AJAX_CATTREEMENU_FIELD_ARTICLE_ORDERING_CREATED_DATE</option>
+                                        <option value="a.ordering">MOD_T_AJAX_CATTREEMENU_FIELD_ARTICLE_ORDERING_ORDERING</option>
+                                        <option value="a.hits">JGLOBAL_HITS</option>
+                                        <option value="rand()">MOD_T_AJAX_CATTREEMENU_FIELD_ARTICLE_ORDERING_RANDOM</option>
+                                </field>
+
+                                <field
+                                        name="article_direction"
+                                        type="list"
+                                        default="1"
+                                        label="JGLOBAL_ORDER_DIRECTION_LABEL"
+                                        description="JGLOBAL_ORDER_DIRECTION_DESC"
+                                >
+                                        <option value="0">JGLOBAL_ORDER_ASCENDING</option>
+                                        <option value="1">JGLOBAL_ORDER_DESCENDING</option>
+                                </field>
+
+                                <field
+                                        name="display_anchor"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_DISPLAY_ANCHOR_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_DISPLAY_ANCHOR_DESC">
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                </field>
+
+                        </fieldset>
+                        <fieldset name="TREE_ICONS">
+                                <field
+                                        name="icon_type"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="img_icons"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_FONT_SELECTED_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_FONT_SELECTED_DESC">
+                                        <option value="img_icons">Image</option>
+                                        <option value="icomoon">Font IcoMoon</option>
+                                        <option value="awesome">Font Awesome</option>
+                                </field>
+                                <field
+                                        name="load_jquery"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_LOAD_JQUERY_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_LOAD_JQUERY_DESC">
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                </field>
+                                <field type="spacer"
+                                       name="myspacer7"
+                                       label="MOD_T_AJAX_CATTREEMENU_SPACER_IMAGE_SETTING_LABEL"
+                                       description="MOD_T_AJAX_CATTREEMENU_SPACER_IMAGE_SETTING_DESC"
+                                />
+                                <field
+                                        name="tree_color"
+                                        type="list"
+                                        default="treeview"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_TREE_COLOR_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_TREE_COLOR_DESC"
+                                >
+                                        <option value="treeview">MOD_T_AJAX_CATTREEMENU_FIELD_TREE_COLOR_DEFAULT_OPTION</option>
+                                        <option value="treeview-red">MOD_T_AJAX_CATTREEMENU_FIELD_TREE_COLOR_RED_OPTION</option>
+                                        <option value="treeview-black">MOD_T_AJAX_CATTREEMENU_FIELD_TREE_COLOR_BLACK_OPTION</option>
+                                        <option value="treeview-gray">MOD_T_AJAX_CATTREEMENU_FIELD_TREE_COLOR_GRAY_OPTION</option>
+                                        <option value="treeview-green">MOD_T_AJAX_CATTREEMENU_FIELD_TREE_COLOR_GREEN_OPTION</option>
+                                </field>
+                                <field type="spacer"
+                                       name="myspacer5"
+                                       label="MOD_T_AJAX_CATTREEMENU_SPACER_FONT_SETTING_LABEL"
+                                       description="MOD_T_AJAX_CATTREEMENU_SPACER_FONT_SETTING_DESC"
+                                />
+                                <field
+                                        name="load_font"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_LOAD_FONT_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_LOAD_FONT_DESC">
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                </field>
+                                <field name="font_color"
+                                       type="color"
+                                       default="#333333"
+                                       label="MOD_T_AJAX_CATTREEMENU_FIELD_FONT_COLOR_LABEL"
+                                       description="MOD_T_AJAX_CATTREEMENU_FIELD_FONT_COLOR_DESC"
+                                />
+
+                                <field type="spacer" name="myspacer2" hr="true" />
+
+                                <field
+                                        name="remember_selection"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_REMEMBER_SELECTION_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_REMEMBER_SELECTION_DESC">
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                </field>
+                                <field
+                                        name="menu_unique"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="0"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_MENU_UNIQUE_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_MENU_UNIQUE_DESC">
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                </field>
+                                <field
+                                        name="user_scroll"
+                                        type="radio"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_USE_SCROLL_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_USE_SCROLL_DESC">
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                </field>
+
+                                <field
+                                        name="padding_top"
+                                        type="text"
+                                        default="0"
+                                        label="MOD_T_AJAX_CATTREEMENU_FIELD_PADDING_TOP_LABEL"
+                                        description="MOD_T_AJAX_CATTREEMENU_FIELD_PADDING_TOP_DESC">
+                                </field>
+                        </fieldset>
+
+                        <fieldset name="advanced">
+                                <field
+                                        name="layout"
+                                        type="modulelayout"
+                                        label="JFIELD_ALT_LAYOUT_LABEL"
+                                        description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                                <field
+                                        name="moduleclass_sfx"
+                                        type="textarea"
+                                        rows="3"
+                                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                                />
+                        </fieldset>
+                </fields>
+        </config>
+</extension>

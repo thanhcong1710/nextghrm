@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+        type="module"
+        version="3.1"
+        client="site"
+        method="upgrade">
+        <name>mod_kiwimap</name>
+        <author>NextG-ERP</author>
+        <authorUrl>nextgerp.com</authorUrl>
+        <creationDate>Aug 06 2015</creationDate>
+        <url>nextgerp.com</url>
+        <license>GNU/GPL version 2 or later; see LICENCE.txt</license>
+        <copyright>Copyright (C) 2015 NextG-ERP. All rights reserved.</copyright>
+        <version>1.0.0</version>
+        <description>MOD_KIWIMAP_XML_DESCRIPTION</description>
+        <files>
+                <filename module="mod_kiwimap">mod_kiwimap.php</filename>
+                <folder>tmpl</folder>
+                <folder>language</folder>
+                <filename>helper.php</filename>
+                <filename>index.html</filename>
+                <filename>mod_kiwimap.xml</filename>
+        </files>
+        <config>
+                <fields name="params">
+                        <fieldset name="basic" addfieldpath="/administrator/components/com_phocamaps/models/fields">
+                                <field name="id" type="phocamapsmap"  default="0" label="MOD_KIWIMAP_SELECT_MAP" description="MOD_KIWIMAP_SELECT_MAP_DESC" required="true" />
+                                <field name="show_description" type="list" default="0" label="MOD_KIWIMAP_DISPLAY_DESCRIPTION" description="MOD_KIWIMAP_DISPLAY_DESCRIPTION_DESC">
+                                        <option value="0">JNO</option>
+                                        <option value="1">JYES</option>
+                                </field>
+                        </fieldset>
+                        <fieldset
+                                name="advanced">
+                                <field
+                                        name="layout"
+                                        type="modulelayout"
+                                        label="JFIELD_ALT_LAYOUT_LABEL"
+                                        description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                                <field
+                                        name="moduleclass_sfx"
+                                        type="textarea" rows="3"
+                                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                        </fieldset>
+                </fields>
+        </config>
+</extension>

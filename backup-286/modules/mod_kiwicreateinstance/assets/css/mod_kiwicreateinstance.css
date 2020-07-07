@@ -1,0 +1,43 @@
+.mod-create-instance {position: relative;padding-top:5px;padding-bottom:5px;}
+.mod-create-instance h1,.mod-create-instance h2, .mod-create-instance h3,.mod-create-instance h4  {margin: 0;}
+.mod-create-instance .slider-desc{
+        margin-top:5px;
+        width:100%;
+        text-align: center;
+        color: #fff;
+}
+.mod-create-instance .slider-desc .main-desc{
+        font-size: 33px;
+        margin-bottom: 30px;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+        .mod-create-instance .slider-desc .main-desc{
+                margin-bottom: 10px;
+                font-size: 20px;
+        }
+}
+@media (max-width: 767px) {
+        .mod-create-instance .slider-desc .main-desc{
+                margin-bottom: 10px;
+                font-size: 15px;
+        }
+}
+.mod-create-instance .slider-desc .sub-desc{
+        margin-top: 30px;
+        font-size: 19px;
+}
+.mod-create-instance .slider-desc .domain-block{
+        padding: 15px;
+
+        border-radius: 10px;
+}
+.mod-create-instance .slider-desc .domain-block .trial-button:hover{
+        background: #0db756;
+}
+.mod-create-instance .slider-desc .domain-block input{color: #5d5450; padding-right:0; font-size: 20px;}
+.mod-create-instance .slider-desc .domain-block .btn {}
+@media (max-width: 991px) {
+        .mod-create-instance .slider-desc .domain-block{padding: 5px;background: none;}
+        .mod-create-instance .slider-desc .domain-block .trial-button {top:5px; right:5px;}
+        .mod-create-instance {margin-bottom: 35px;}
+}
