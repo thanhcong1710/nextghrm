@@ -1,0 +1,1 @@
+FD31.component("EasyDiscuss", {"environment":"static","source":"local","mode":"compressed","baseUrl":"http:\/\/localhost\/erponline.co.nz\/index.php?option=com_easydiscuss&lang=en&Itemid=178","version":"3.2.9602","scriptVersioning":false,"responsive":false});
