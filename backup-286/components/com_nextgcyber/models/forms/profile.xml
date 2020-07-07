@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+        <fieldset addfieldpath="/administrator/components/com_nextgcyber/models/forms">
+                <field
+                        name="id"
+                        type="hidden"
+                />
+                
+                <field name="name"
+                       type="text"
+                       label="COM_NEXTGCYBER_PROFILE_NAME_LABEL"
+                       description="COM_NEXTGCYBER_PROFILE_NAME_DESC"
+                       size="40"
+                       class="form-control"
+                       hint="COM_NEXTGCYBER_TITLE_HINT"
+                       required="true"
+                       labelclass="col-sm-3 control-label"
+                />
+                
+                <field name="email"
+                       type="text"
+                       label="COM_NEXTGCYBER_PARTNER_EMAIL_LABEL"
+                       description="COM_NEXTGCYBER_PARTNER_EMAIL_DESC"
+                       size="40"
+                       class="form-control"
+                       hint="COM_NEXTGCYBER_PARTNER_EMAIL_HINT"
+                       required="true"
+                       labelclass="col-sm-3 control-label"
+                />
+                
+                
+                
+                <field name="fax"
+                       type="text"
+                       label="COM_NEXTGCYBER_PROFILE_FAX_LABEL"
+                       description="COM_NEXTGCYBER_PROFILE_FAX_DESC"
+                       size="40"
+                       class="form-control"
+                       hint=""
+                       labelclass="col-sm-3 control-label"
+                />
+                
+                <field name="mobile"
+                       type="text"
+                       label="COM_NEXTGCYBER_PROFILE_MOBILE_LABEL"
+                       description="COM_NEXTGCYBER_PROFILE_MOBILE_DESC"
+                       size="40"
+                       class="form-control"
+                       hint=""
+                       labelclass="col-sm-3 control-label"
+                />
+                
+                <field name="phone"
+                       type="text"
+                       label="COM_NEXTGCYBER_PROFILE_PHONE_LABEL"
+                       description="COM_NEXTGCYBER_PROFILE_PHONE_DESC"
+                       size="40"
+                       class="form-control"
+                       hint=""
+                       labelclass="col-sm-3 control-label"
+                />
+                
+                <field name="nc_viber"
+                       type="text"
+                       label="COM_NEXTGCYBER_PROFILE_VIBER_LABEL"
+                       description="COM_NEXTGCYBER_PROFILE_VIBER_DESC"
+                       size="40"
+                       class="form-control"
+                       hint=""
+                       labelclass="col-sm-3 control-label"
+                />
+                
+                <field name="nc_skype"
+                       type="text"
+                       label="COM_NEXTGCYBER_PROFILE_SKYPE_LABEL"
+                       description="COM_NEXTGCYBER_PROFILE_SKYPE_DESC"
+                       size="40"
+                       class="form-control"
+                       hint=""
+                       labelclass="col-sm-3 control-label"
+                />
+                
+                <field name="contact_address"
+                       type="text"
+                       label="COM_NEXTGCYBER_PROFILE_CONTACT_ADDRESS_LABEL"
+                       description="COM_NEXTGCYBER_PROFILE_CONTACT_ADDRESS_DESC"
+                       size="40"
+                       class="form-control"
+                       hint=""
+                       labelclass="col-sm-3 control-label"
+                />
+                
+                <field name="street"
+                       type="text"
+                       label="COM_NEXTGCYBER_PROFILE_ADDRESS_LABEL"
+                       description="COM_NEXTGCYBER_PROFILE_ADDRESS_DESC"
+                       size="40"
+                       class="form-control"
+                       hint=""
+                       labelclass="col-sm-3 control-label"
+                />
+
+                <field name="is_company" type="list" label="COM_NEXTGCYBER_PARTNER_IS_COMPANY_LABEL"
+                       description="COM_NEXTGCYBER_PARTNER_IS_COMPANY_DESC"
+                       class="form-control"
+                       labelclass="col-sm-3 control-label"
+                       size="1" default="0" filter="int"
+                >
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                </field>
+        </fieldset>
+</form>

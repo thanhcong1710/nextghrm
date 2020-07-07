@@ -1,0 +1,38 @@
+/**
+ * @package nextgcyber
+ * @subpackage com_nextgcyber
+ * @copyright Copyright (C) 2015 NextgCyber . All rights reserved.
+ * @license http://www.gnu.org/licences GNU/GPL version 2 or later; see LICENSE.txt
+ * @author url: http://nextgerp.com
+ * @author NextG-ERP support@nextgerp.com
+ */
+.accordion-heading.active a{
+        background-color: rgb(0, 136, 204);
+        color: #fff;
+        text-decoration: none;
+}
+.accordion-heading a:hover{
+        background-color: rgb(0, 136, 204);
+        color: #fff;
+        text-decoration: none;
+}
+.accordion-inner.active, .accordion-inner.active:hover{
+        background-color: rgb(238, 238, 238);
+        font-weight: bold;
+}
+.accordion-group:hover{
+        background: #08C;
+}
+
+.accordion-group:hover > .accordion-heading a.accordion-toggle{
+        color: #fff;
+        text-decoration: none;
+}
+
+.accordion-inner:hover {
+        background-color: rgb(238, 238, 238);
+}
+.accordion-inner a:hover {
+        text-decoration: none;
+}
+.accordion-body.in.collapse{background-color: #d6d6d6;}
