@@ -93,7 +93,7 @@ class UsersControllerUser extends UsersController
 		// Set the return URL if empty.
 		if (empty($data['return']))
 		{
-			$data['return'] = 'index.php?option=com_users&view=profile';
+			$data['return'] = 'index.php?option=com_nextgcyber&view=dashboard';
 		}
 
 		// Set the return URL in the user state to allow modification by plugins
