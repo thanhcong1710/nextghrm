@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+  <name>com_layer_slider</name>
+  <creationDate>2014-03-24</creationDate>
+  <copyright>Copyright (C) 2014. All rights reserved.</copyright>
+  <author>John Gera, George Krupa, Janos Biro</author>
+  <authorEmail>janos.biro@offlajn.com</authorEmail>
+  <authorUrl>http://offlajn.com</authorUrl>
+  <version>5.1.1.048</version>
+  <description/>
+  <media folder="admin/assets/js" destination="offlajn">
+    <filename>jquery.noconflict.js</filename>
+    <filename>index.html</filename>
+  </media>
+  <administration>
+    <menu img="components/com_layer_slider/assets/images/s_com_layer_slider.png">COM_LAYER_SLIDER</menu>
+    <submenu>
+      <menu link="option=com_layer_slider&amp;view=sliders" view="sliders">COM_LAYER_SLIDER_TITLE_SLIDERS</menu>
+      <menu link="option=com_layer_slider&amp;view=transitionbuilder" view="transitionbuilder">COM_LAYER_SLIDER_TITLE_TRANSITION_BUILDER</menu>
+      <menu link="option=com_layer_slider&amp;view=skineditor" view="skineditor">COM_LAYER_SLIDER_TITLE_SKIN_EDITOR</menu>
+      <menu link="option=com_layer_slider&amp;view=customstyleseditor" view="customstyleseditor">COM_LAYER_SLIDER_TITLE_CUSTOM_STYLES_EDITOR</menu>
+    </submenu>
+    <languages folder="admin">
+      <language tag="en-GB">language/en-GB.com_layer_slider.ini</language>
+      <language tag="en-GB">language/en-GB.com_layer_slider.sys.ini</language>
+    </languages>
+    <files folder="admin">
+      <filename>access.xml</filename>
+      <folder>assets</folder>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <folder>controllers</folder>
+      <folder>helpers</folder>
+      <filename>index.html</filename>
+      <folder>language</folder>
+      <filename>layer_slider.php</filename>
+      <folder>models</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+    </files>
+  </administration>
+  <license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
+  <releaseDate>2014-06-18</releaseDate>
+  <files folder="site">
+    <folder>base</folder>
+    <filename>index.html</filename>
+    <filename>layer_slider.php</filename>
+  </files>
+</extension>

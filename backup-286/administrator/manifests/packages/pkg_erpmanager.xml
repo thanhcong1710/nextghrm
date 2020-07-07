@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.4" method="upgrade">
+        <name>NextgCyber for Joomla</name>
+        <author>NextgCyber</author>
+        <authorUrl>http://nextgerp.com</authorUrl>
+        <authorEmail>support@nextgerp.com</authorEmail>
+        <creationDate>Aug 2015</creationDate>
+        <packagename>nextgcyber</packagename>
+        <version>3.9.21</version>
+        <url>http://nextgerp.com/</url>
+        <license>GNU/GPL version 2 or later; see LICENCE.txt</license>
+        <copyright>Copyright (C) 2011-1014 NextG-ERP . All rights reserved.</copyright>
+        <description>NextgCyber for Joomla</description>
+        <files folder="packages">
+                <file type="component" id="com_nextgcyber" >com_nextgcyber.zip</file>
+                <file type="plugin" id="sshmaster" group="system">plg_sshmaster.zip</file>
+                <file type="plugin" id="emailtemplate" group="system">plg_emailtemplate.zip</file>
+                <file type="module" id="mod_nextgcyber_addons" client="site">mod_nextgcyber_addons.zip</file>
+                <file type="plugin" id="affiliatefinder" group="system">plg_affiliatefinder.zip</file>
+                <file type="file" id="nextgcyber">clinextgcyber.zip</file>
+        </files>
+</extension>

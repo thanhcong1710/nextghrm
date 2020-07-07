@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.4" type="file"  method="upgrade">
+        <name>NextgCyber - CLI Application</name>
+        <author>NextG-ERP</author>
+        <copyright>(C) 2015 NextG-ERP. All rights reserved.</copyright>
+        <creationDate>Aug 2015</creationDate>
+        <license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+        <authorEmail>support@nextgerp.com</authorEmail>
+        <authorUrl>nextgerp.com</authorUrl>
+        <version>1.0.0</version>
+        <description>Command Line Scripts for NextgCyber</description>
+        <fileset>
+                <files target="cli">
+                        <folder>nextgcyber</folder>
+                </files>
+        </fileset>
+</extension>
+

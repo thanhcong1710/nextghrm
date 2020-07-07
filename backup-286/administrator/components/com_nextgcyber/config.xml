@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="component" label="COM_NEXTGCYBER_CONFIG_LABEL"
+              description="COM_NEXTGCYBER_CONFIG_DESC">
+        <field name="debug_mode"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="COM_NEXTGCYBER_CONFIG_BUG_MOD_LABEL"
+               description="COM_NEXTGCYBER_CONFIG_BUG_MOD_DESC"
+               default="0"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field default="nextgerp.com" name="odoo_host" type="text" class="input-box" label="Odoo host" description="IP or domain name of Odoo host. Example 128.199.xxx.xxx, 128.199.xxx.xxx:8069, domain.com, domain.com:8069"></field>
+        <field default="nextgcyber" name="odoo_db" type="text" class="input-box" label="Odoo database" description="NextgCyber database name"></field>
+        <field default="oddo_master" name="odoo_user" type="text" class="input-box" label="Odoo username" description="Username on NextgCyber Odoo Server"></field>
+        <field default="" name="odoo_password" type="password" class="input-box" label="Odoo password" description="Password"></field>
+        <field default="1" name="free_trial" type="text" class="input-box" label="Free trial" description="The maximum free instance user can create"></field>
+        <field name="ssl_included"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="SSL Included?"
+               description=""
+               default="1"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field default="NZL" name="country_code" type="text" class="input-box" label="Country code" description="This value to detect visitor country. If visitor country as same as this value, tax will be included, btw visitor from another country, tax is empty"></field>
+    </fieldset>
+    <fieldset name="paypal" label="Paypal" addfieldpath="/administrator/components/com_nextgcyber/models/fields"
+              description="">
+        <field name="paypal_journal_id"
+               type="Journal"
+               label="Paypal Journal"
+               description=""
+               size="2"
+               class="inputbox input-xxlarge"
+        />
+        <field default="account@gmail.com" name="paypal_account" type="text" class="input-box" label="Paypal Account" description="The Paypal email address"></field>
+        <field name="sandbox_mode"
+               type="radio"
+               class="btn-group btn-group-yesno"
+               label="Sandbox"
+               description=""
+               default="0"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field default="account@gmail.com" name="paypal_sandbox_account" type="text" class="input-box" label="Sandbox account" description="The Paypal email address"></field>
+
+    </fieldset>
+    <fieldset
+        name="permissions"
+        label="JCONFIG_PERMISSIONS_LABEL"
+        description="JCONFIG_PERMISSIONS_DESC"
+    >
+
+        <field
+            name="rules"
+            type="rules"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            validate="rules"
+            filter="rules"
+            component="com_nextgcyber"
+            section="component" />
+    </fieldset>
+</config>

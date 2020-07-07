@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+        <fieldset addfieldpath="/administrator/components/com_nextgcyber/models/forms">
+                <field
+                        name="id"
+                        type="hidden"
+                />
+                
+                <field name="name"
+                       type="text"
+                       label="COM_NEXTGCYBER_TITLE_LABEL"
+                       description="COM_NEXTGCYBER_TITLE_DESC"
+                       size="40"
+                       class="inputbox input-xxlarge"
+                       hint="COM_NEXTGCYBER_TITLE_HINT"
+                       required="true"
+                />
+                
+                <field name="email"
+                       type="text"
+                       label="COM_NEXTGCYBER_PARTNER_EMAIL_LABEL"
+                       description="COM_NEXTGCYBER_PARTNER_EMAIL_DESC"
+                       size="40"
+                       class="inputbox input-xxlarge"
+                       hint="COM_NEXTGCYBER_PARTNER_EMAIL_HINT"
+                       required="true"
+                />
+                
+                <field name="create_date" type="calendar" label="JGLOBAL_FIELD_CREATED_LABEL"
+                       description="JGLOBAL_FIELD_CREATED_DESC" size="22"
+                       format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+                
+                <field name="customer" type="list" label="COM_NEXTGCYBER_PARTNER_IS_CUSTOMER_LABEL"
+                       description="COM_NEXTGCYBER_PARTNER_IS_CUSTOMER_DESC"
+                       class="chzn-color-state"
+                       size="1" default="1" filter="int"
+                >
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                </field>
+                
+                <field name="is_company" type="list" label="COM_NEXTGCYBER_PARTNER_IS_COMPANY_LABEL"
+                       description="COM_NEXTGCYBER_PARTNER_IS_COMPANY_DESC"
+                       class="chzn-color-state"
+                       size="1" default="0" filter="int"
+                >
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                </field>
+
+                <field name="active" type="list" label="JSTATUS"
+                       description="JFIELD_PUBLISHED_DESC"
+                       class="chzn-color-state"
+                       size="1" default="1" filter="int"
+                >
+                        <option value="1">JPUBLISHED</option>
+                        <option value="0">JUNPUBLISHED</option>
+                </field>
+        </fieldset>
+</form>

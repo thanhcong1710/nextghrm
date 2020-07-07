@@ -1,0 +1,17 @@
+#ls-screen-options,
+#toolbar-box{
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+ul{
+  padding-left:0;
+}
+
+.ls-slider-titlewrap input{
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

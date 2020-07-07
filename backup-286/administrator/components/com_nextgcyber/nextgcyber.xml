@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.4" method="upgrade">
+    <name>com_nextgcyber</name>
+    <author>Daniel.Vu</author>
+    <creationDate>Jan 2016</creationDate>
+    <copyright>(C) 2016 Daniel.Vu All rights reserved.</copyright>
+    <license>GNU General Public License version 3; see LICENSE.txt</license>
+    <authorUrl>http://nextgerp.com</authorUrl>
+    <version>1.4</version>
+    <description>NEXTGCYBER_XML_DESCRIPTION</description>
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update; New in 2.5 -->
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+    <media folder="media" destination="com_nextgcyber">
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>img</folder>
+        <folder>fonts</folder>
+        <filename>index.html</filename>
+    </media>
+    <scriptfile>scriptfile.nextgcyber.php</scriptfile>
+
+    <files folder="site">
+        <filename>nextgcyber.php</filename>
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>router.php</filename>
+        <filename>metadata.xml</filename>
+        <folder>helpers</folder>
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>controllers</folder>
+        <folder>layouts</folder>
+    </files>
+    <administration>
+        <menu link="option=com_nextgcyber">com_nextgcyber</menu>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>nextgcyber.php</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <folder>controllers</folder>
+            <folder>language</folder>
+            <folder>helpers</folder>
+            <folder>initdata</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>sql</folder>
+            <folder>layouts</folder>
+            <folder>libraries</folder>
+            <folder>logs</folder>
+        </files>
+    </administration>
+</extension>
